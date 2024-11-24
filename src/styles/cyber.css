@@ -1,0 +1,145 @@
+:root {
+    --neon-green: #0fd;
+    --neon-blue: #0ff;
+    --dark-bg: #111;
+    --darker-bg: #000;
+    --terminal-green: #00ff00;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--dark-bg);
+    font-family: 'Courier New', monospace;
+    color: var(--neon-green);
+    background-image: 
+      linear-gradient(rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .login-box {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border: 1px solid var(--neon-green);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--neon-green),
+                inset 0 0 10px var(--neon-green);
+    animation: pulse 2s infinite;
+  }
+  
+  .login-title {
+    text-align: center;
+    color: var(--neon-green);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 5px var(--neon-green);
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+  }
+  
+  .login-form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--neon-green);
+  }
+  
+  .cyber-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  
+  .cyber-button:hover {
+    background: var(--neon-green);
+    color: black;
+    box-shadow: 0 0 10px var(--neon-green);
+  }
+  
+  /* Dashboard styles */
+  .dashboard-container {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .terminal-window {
+    border: 1px solid var(--neon-green);
+    padding: 20px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px var(--neon-green);
+  }
+  
+  .terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--neon-green);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .terminal-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--neon-green);
+  }
+  
+  .terminal-content {
+    font-family: 'Courier New', monospace;
+    color: var(--terminal-green);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px var(--neon-green);
+    }
+    50% {
+      box-shadow: 0 0 20px var(--neon-green);
+    }
+    100% {
+      box-shadow: 0 0 10px var(--neon-green);
+    }
+  }
+  
+  .loading-text {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 3s steps(40, end);
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
